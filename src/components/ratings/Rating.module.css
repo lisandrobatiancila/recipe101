@@ -1,0 +1,12 @@
+.star {
+    width: 200px;
+    border: 1px solid var(--ddColor);
+    padding: 10px;
+    border-radius: 3px;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+}
+.star > img {
+    margin: 5px;
+}

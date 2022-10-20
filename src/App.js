@@ -1,8 +1,14 @@
+import Navigation from './components/navigation/Navigation';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import './App.css';
+
 function App() {
   return (
-    <div className="App">
-        welcome to recipe 101
-    </div>
+    <Routes>
+      <Route path='/' element = { <Home /> }>
+      </Route>
+    </Routes>
   );
 }
 

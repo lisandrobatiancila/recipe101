@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+:root {
+  --darkColor: #181818;
+  --ffColor: #fff;
+  --ddColor: #ddd;
+  --borderColorSuccess: #52df9d;
+  --bodyColorSuccess: #1ca854;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 18px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text_capitalize {
+  text-transform: capitalize;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.text_capitalize_first::first-letter {
+  text-transform: capitalize;
+}
+.nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: space-between;
+  justify-content: space-between;
 }
-
-.App-link {
-  color: #61dafb;
+.container {
+  padding: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--ffColor);
+}
+.nav_dark {
+  background-color: var(--darkColor);
+}
+.nav > .nav_item > li {
+  float: left;
+}
+.nav > .nav_item > li a{
+  display: block;
+  padding: 18px;
+}
+.nav > .nav_item > li a:hover {
+  background-color: #534f4f;
+}
+input {
+  border: 1px solid var(--ddColor);
+  border-radius: 3px;
+  padding: 8px 12px;
+}
+.float_end {
+  float: right;
+}
+.nav button {
+  border: 0px;
+  border: 1px solid var(--borderColorSuccess);
+  border-radius: 3px;
+  padding: 8px 10px;
+  cursor: pointer;
+  background-color: transparent;
+  margin: 10px;
+  color: var(--ffColor);
+}
+.nav button:hover {
+  background-color: var(--bodyColorSuccess)
+}
+hr {
+  border: 1px solid var(--ddColor);
+  margin: 5px;
+}
+button {
+  padding: 8px 10px;
+  border: 1px solid var(--ddColor);
+  cursor: pointer;
 }

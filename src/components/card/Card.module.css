@@ -1,0 +1,29 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card_container {
+    width: 32.33%;
+    border: 1px solid var(--ddColor);
+    border-radius: 3px;
+    margin: 5px;
+    cursor: pointer;
+}
+.card_header {
+    padding: 5px;
+    text-align: center;
+    padding: 5px;
+}
+.card_body {
+    padding: 10px;
+    position: relative;
+}
+.card_body > button {
+    margin: 0 auto;
+    text-align: center;
+}
+.card_container:hover {
+    box-shadow: 0 0px 5px 6px var(--ddColor);
+}

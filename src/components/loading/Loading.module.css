@@ -1,0 +1,33 @@
+.loading_container > span{
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+}
+.loading_body {
+    width: 30px;
+    height: 30px;
+    animation: loading 2s linear infinite;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    border-radius: 100%;
+    border-top: 3px solid var(--bodyColorSuccess);
+    border-right: 3px solid var(--bodyColorSuccess);
+    border-left: 3px solid var(--bodyColorSuccess);
+    border-bottom: 3px solid var(--bodyColorSuccess);
+    border-bottom: 3px solid var(--ffColor);
+    background-color: var(--ffColor);
+    padding: 10px;
+    position: relative;
+}
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes loading {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
