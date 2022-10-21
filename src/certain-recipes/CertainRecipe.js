@@ -12,7 +12,8 @@ function CertainRecipe () {
     useEffect(() => {
         setIngredients(certain_view_recipes.ingredients.split(';'))
         setInstructions(certain_view_recipes.instructions.split('.'))
-    }, []);
+    }, [])
+
 
     return (
         <section className={ certainRecipeStyle.certain_recipe }>

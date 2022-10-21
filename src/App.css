@@ -38,9 +38,12 @@ a {
 .nav_dark {
   background-color: var(--darkColor);
 }
-.nav > .nav_item > li {
-  float: left;
+.nav > .nav_item > li:first-child {
+  display: none;
 }
+/* .nav > .nav_item > ul li {
+  float: left;
+} */
 .nav > .nav_item > li a{
   display: block;
   padding: 18px;
@@ -78,4 +81,31 @@ button {
   padding: 8px 10px;
   border: 1px solid var(--ddColor);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav > .nav_item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav > .nav_item li:first-child {
+    display: block;
+  }
+  .nav > .nav_item > li a{
+    display: block;
+  }
+  .nav button {
+    width: auto;
+  }
+  .float_end {
+    display: block;
+  }
+  .float_end > li > input {
+    width: fit-content;
+  }
 }

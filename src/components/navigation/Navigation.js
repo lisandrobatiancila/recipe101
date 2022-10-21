@@ -6,11 +6,17 @@ function Navigation({ keywords, setKeywords, goSearch, setIsLoading }) {
         <nav className="nav nav_dark">
             <ul className="nav_item">
                 <li style={{float: "left"}}>
+                    <Link to="/" className="icon">
+                        <i className="fa fa-bars"></i>
+                    </Link>
+                </li>
+                <li style={{float: "left"}}>
                     <Link to="/" className="text_capitalize">recipes</Link>
                 </li>
                 <li style={{float: "left"}}>
                     <Link to="/favorites" className="text_capitalize">favorites</Link>
                 </li>
+                
             </ul>
             <ul className="float_end">
                 <li>

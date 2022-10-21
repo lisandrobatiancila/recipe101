@@ -36,3 +36,14 @@ section ul li a{
 section ul li a:hover {
     text-decoration: underline;
 }
+@media only screen and (max-width: 800px) {
+    .footer_body {
+        position: relative;
+        margin-top: 50px;
+    }
+    .footer_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
