@@ -3,19 +3,26 @@ import { useRecipe } from "./useRecipe"
 
 
 export const useRecipeReceiver = () => {
-    const { setRecipe } = useRecipe()
+    const { keywords, setKeywords, setRecipe } = useRecipe()
 
     const recipes = async () => {
-        const response = await axios_api.get(
-            '/recipe',
-            {
-                params: {query: 'adobo'}
-            }
-        )
-        setRecipe(response?.data)
-        console.log(response)
-
-        return response
+        if(/[^\s]/.test(keywords)) {
+            const response = await axios_api.get(
+                '/recipe',
+                {
+                    params: {query: keywords}
+                }
+            )
+            setRecipe(response?.data)
+            console.log(response)
+    
+            return response
+        }
+        else{
+            setKeywords('')
+            setRecipe(null)
+        }
+        return null;
     }
     
     return recipes;

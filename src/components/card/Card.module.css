@@ -5,11 +5,12 @@
     flex-wrap: wrap;
 }
 .card_container {
-    width: 32.33%;
+    width: 48.99%;
     border: 1px solid var(--ddColor);
     border-radius: 3px;
     margin: 5px;
     cursor: pointer;
+    background-color: var(--ffColor);
 }
 .card_header {
     padding: 5px;
@@ -20,10 +21,39 @@
     padding: 10px;
     position: relative;
 }
+.card_body > span {
+    border-bottom: 2px solid var(--bodyColorSuccess);
+}
 .card_body > button {
     margin: 0 auto;
     text-align: center;
 }
 .card_container:hover {
     box-shadow: 0 0px 5px 6px var(--ddColor);
+}
+.actions {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px;
+}
+.actions > button {
+    margin: 0 5px;
+    border-radius: 5px;
+}
+.actions > button:first-child {
+    border: 1px solid #3dc0f0;
+    background-color: var(--ffColor);
+}
+.actions > button:not(:first-child) {
+    border: 1px solid #3df085;
+    background-color: var(--ffColor);
+}
+.actions > button:hover:first-child {
+    background-color: #0d84ce;
+    color: var(--ffColor)
+}
+.actions > button:hover:not(:first-child) {
+    background-color: #10c759;
+    color: var(--ffColor)
 }

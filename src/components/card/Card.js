@@ -1,8 +1,13 @@
+import { useNavigate } from 'react-router-dom';
 import Ratings from '../ratings/Ratings';
 import cardStyle from './Card.module.css';
-import { Link } from 'react-router-dom';
 
-function Card ({ recipes }) {
+function Card ({ recipes, addToFavorites }) {
+    const navigate = useNavigate();
+
+    const viewMore = (title) => {
+        navigate(`/view/${title}`);
+    }
 
     return (
         <div className={ cardStyle.card }>
@@ -16,12 +21,22 @@ function Card ({ recipes }) {
                             <hr />
                         </div>
                         <div className={ cardStyle.card_body }>
-                            {
-                                recipe.servings
-                            }
+                            <span>
+                                {
+                                    recipe.servings
+                                }
+                            </span>
                             <Ratings />
                         </div>
-                        <button>view more</button>
+                        <div className={ cardStyle.actions }>
+                            <button className="text_capitalize"
+                                onClick={ ()=>{
+                                    viewMore(recipe.title)
+                                    localStorage.setItem('view_certain_recipe', JSON.stringify(recipe))
+                                } }>view more</button>
+                            <button className="text_capitalize"
+                                onClick={ () => addToFavorites(recipe) }>add to favorites</button>
+                        </div>
                     </div>
                 )
             }

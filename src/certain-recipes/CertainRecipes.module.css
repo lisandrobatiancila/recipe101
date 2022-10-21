@@ -1,0 +1,62 @@
+.certain_recipe {
+    width: 900px;
+    border: 1px solid var(--ddColor);
+    border-radius: 3px;
+    padding: 10px;
+    margin: 10px auto 10px auto;
+    background-color: var(--ffColor);
+}
+.title {
+    width: 600px;
+    border: 1px solid var(--ddColor);
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+.title:first-child {
+    background-color: #555;
+    color: var(--ffColor);
+}
+.certain_recipe_body {
+    margin-top: 10px;
+}
+.ingredient:nth-child(odd) {
+    background-color: #f2a04f;
+    border: 1px solid var(--ddColor);
+    border-radius: 3px;
+    padding: 7px;
+    margin: 7px 0;
+}
+.ingredient:nth-child(even) {
+    background-color: #da7919;
+    border: 1px solid var(--ddColor);
+    border-radius: 3px;
+    padding: 7px;
+    margin: 7px 0;
+}
+.instruction:nth-child(odd) {
+    background-color: #45d771;
+    border: 1px solid var(--ddColor);
+    border-radius: 3px;
+    padding: 7px;
+    margin: 7px 0;
+}
+.instruction:nth-child(even) {
+    background-color: #71cc8d;
+    border: 1px solid var(--ddColor);
+    border-radius: 3px;
+    padding: 7px;
+    margin: 7px 0;
+}
+.justify_left {
+    text-align: justify;
+}
+.text_warning {
+    border-bottom: 2px solid #da7919;
+    width: 100px;
+}
+.text_success {
+    border-bottom: 2px solid #30df7f;
+    width: 100px;
+}

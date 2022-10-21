@@ -1,0 +1,28 @@
+.stack_container {
+    position: relative;
+    margin-top: 50px;
+    background-color: var(--skewColor);
+    padding: 50px;
+    height: auto;
+}
+.skew_div {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    background-color: var(--bodyColor);
+    transform: skewY(-10deg);
+    z-index: 1;
+    margin-top: -20px;
+}
+.stackTitle {
+    width: 200px;
+    border: 1px solid var(--ddColor);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: var(--ffColor);
+    cursor: pointer;
+}
+.stackTitle > h3 {
+    text-align: center;
+}

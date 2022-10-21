@@ -1,0 +1,51 @@
+.used_card_container {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.card_used {
+    width: 33.33%;
+    border: 1px solid var(--ddColor);
+    background-color: var(--ffColor);
+    border-radius: 5px;
+    margin: 5px;
+}
+.used_card_header {
+    text-align: center;
+    padding: 10px;
+    color: var(--ffColor);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.used_card_body {
+    padding: 10px;
+    text-align: center;
+}
+.used_card_body_content {
+    width: 200px;
+    margin: 0 auto;
+}
+.used_card_body_content div p {
+    color: var(--darkColor)
+}
+.card_used:hover {
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+.github_color {
+    background-color: #29242f;
+}
+.heroku_color {
+    background-color: #79589f;
+}
+.free_apis_color {
+    background-color: #ff8c00;
+}
+.free_icons_color {
+    background-color: #4ad295;
+}
+.reactJS_color {
+    background-color: #e9bc1a;
+}

@@ -1,44 +1,22 @@
-import Navigation from "./components/navigation/Navigation"
-import Footer from "./components/footer/Footer"
-import { useEffect, useState } from "react"
-import Loading from "./components/loading/Loading"
-import { useRecipe } from "./hooks/useRecipe"
-import { useRecipeReceiver } from "./hooks/useRecipeReceiver"
-import Card from './components/card/Card'
+import Navigation from "./components/navigation/Navigation";
+import Footer from "./components/footer/Footer";
+import RecipeStorage from './storage/recipeDB';
+import { Outlet } from "react-router-dom";
+import { useRecipe } from './hooks/useRecipe';
 
 function Home() {
-    const { recipe } = useRecipe();
-    const recipeReceiver = useRecipeReceiver();
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const retrieveRecipe = async () => {
-            try {
-                await recipeReceiver();
-                setIsLoading(false);
-            }
-            catch(err) {
-                console.log(err);
-            }
-            finally {
-                setIsLoading(false);
-            }
-        }
-        isLoading?retrieveRecipe():setIsLoading(false);
-    }, []);
+    const { setIsLoading, keywords, setKeywords } = useRecipe();
+    
+    const goSearch = () => {
+        console.log(keywords)
+    }
 
     return(
-        <>
-            <Navigation />
-            <div className="container">
-                {
-                    isLoading? <Loading message={"fetching..."} />
-                    :
-                    <Card recipes = { recipe } />
-                }
-            </div>
+        <div style={{position: "relative"}}>
+            <Navigation keywords={ keywords } setKeywords = { setKeywords } goSearch = { goSearch } setIsLoading = { setIsLoading } />
+            <Outlet />
             <Footer />
-        </>
+        </div>
     )
 }
 

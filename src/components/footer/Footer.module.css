@@ -1,10 +1,38 @@
 .footer_body {
     width: 100%;
-    padding: 10px;
+    padding: 20px 10px;
     position: absolute;
     left: 0;
     right: 0;
     top: 1;
     bottom: 0%;
     background-color: var(--darkColor);
+    margin-bottom: -250px;
+    z-index: 2;
+}
+.footer_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.footer_content section {
+    color: var(--ffColor);
+}
+section > h3 {
+    background-color: var(--ffColor);
+    color: var(--darkColor);
+    padding: 5px 10px;
+    border: 1px solid var(--ddColor);
+    border-radius: 3px;
+}
+section ul {
+    margin: 5px 0;
+}
+section ul li a{
+    display: block;
+    color: var(--ffColor);
+    margin: 5px 0;
+}
+section ul li a:hover {
+    text-decoration: underline;
 }
