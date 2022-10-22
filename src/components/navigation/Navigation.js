@@ -16,7 +16,6 @@ function Navigation({ keywords, setKeywords, goSearch, setIsLoading }) {
                 <li style={{float: "left"}}>
                     <Link to="/favorites" className="text_capitalize">favorites</Link>
                 </li>
-                
             </ul>
             <ul className="float_end">
                 <li>
@@ -27,10 +26,10 @@ function Navigation({ keywords, setKeywords, goSearch, setIsLoading }) {
                             setIsLoading(true)
                         } } />
 
-                    <button className="text_capitalize"
+                    {/* <button className="text_capitalize"
                         onClick={ goSearch }>
                         search
-                    </button>
+                    </button> */}
                 </li>
             </ul>
         </nav>

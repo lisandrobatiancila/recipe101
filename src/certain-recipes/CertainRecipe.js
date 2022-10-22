@@ -1,17 +1,25 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useRecipe } from "../hooks/useRecipe";
 import certainRecipeStyle from './CertainRecipes.module.css';
 
 function CertainRecipe () {
     const [ingredients, setIngredients] = useState(null);
     const [instructions, setInstructions] = useState(null);
+    const { setMessage } = useRecipe();
 
     const params = useParams()
     const certain_view_recipes = JSON.parse(localStorage.getItem('view_certain_recipe'));
 
     useEffect(() => {
-        setIngredients(certain_view_recipes.ingredients.split(';'))
-        setInstructions(certain_view_recipes.instructions.split('.'))
+        setIngredients(certain_view_recipes.ingredients.split(';'));
+        setInstructions(certain_view_recipes.instructions.split('.'));
+        setMessage({
+            message: '', error_types: {
+                error: false,
+                warning: false,
+                success: false
+        }});
     }, [])
 
 

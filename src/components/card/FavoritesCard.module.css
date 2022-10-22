@@ -1,38 +1,33 @@
-.card {
-    position: relative;
+.favorites_card {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
-.card_container {
-    width: 48.99%;
+.favorites_content {
+    width: 48.33%;
     border: 1px solid var(--ddColor);
     border-radius: 3px;
-    margin: 5px;
-    cursor: pointer;
     background-color: var(--ffColor);
+    margin: 5px;
 }
-.card_header {
-    padding: 5px;
-    text-align: center;
-    padding: 5px;
-}
-.card_body {
+.favorites_content > .favorites_header {
     padding: 10px;
-    position: relative;
-}
-.card_body > span {
-    border-bottom: 2px solid var(--bodyColorSuccess);
-}
-.card_body > button {
-    margin: 0 auto;
     text-align: center;
+    background-color: var(--borderColorSuccess);
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
 }
-.card_container:hover {
-    box-shadow: 0 0px 5px 6px var(--ddColor);
+.favorites_content > .favorites_body {
+    padding: 10px;
 }
-.actions {
-    width: 400px;
+.favorites_body > p {
+    border-bottom: 1px solid var(--borderColorSuccess);
+    width: 100px;
+    margin: 5px 0;
+}
+.favorites_body > .actions {
+    width: auto;
     margin: 0 auto;
     text-align: center;
     padding: 5px;
@@ -46,7 +41,7 @@
     background-color: var(--ffColor);
 }
 .actions > button:not(:first-child) {
-    border: 1px solid #3df085;
+    border: 1px solid #f58d64;
     background-color: var(--ffColor);
 }
 .actions > button:hover:first-child {
@@ -54,31 +49,23 @@
     color: var(--ffColor)
 }
 .actions > button:hover:not(:first-child) {
-    background-color: #10c759;
+    background-color: #ff5436;
     color: var(--ffColor)
 }
 .actions > button:active {
     transform: translateY(-3px);
 }
-@media only screen and (max-width: 1030px) {
-    .card {
-      display: flex;
-      flex-direction: column;
-    }
-    .card_container {
-        width: 100%;
-    }
-    .actions {
+.favorites_content:hover {
+    box-shadow: 0 0 8px 5px var(--ddColor);
+    cursor: pointer;
+}
+@media only screen and (max-width: 800px) {
+    .favorites_card {
         display: flex;
         flex-direction: column;
     }
-    .actions > button{
-        margin: 5px 0 0 0;
-    }
-  }
-
-@media only screen and (max-width: 500px) {
-    .actions {
-        width: auto;
+    .favorites_content {
+        width: 100%;
+        margin: 5px;
     }
 }

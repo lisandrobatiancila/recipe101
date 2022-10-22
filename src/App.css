@@ -56,9 +56,10 @@ input {
   border: 1px solid var(--ddColor);
   border-radius: 3px;
   padding: 8px 12px;
+  margin-right: 5px;
 }
 .float_end {
-  float: right;
+  float: left;
 }
 .nav button {
   border: 0px;
@@ -102,10 +103,10 @@ button {
   .nav button {
     width: auto;
   }
-  .float_end {
+  nav ul {
     display: block;
   }
-  .float_end > li > input {
-    width: fit-content;
+  nav ul input {
+    width: auto;
   }
 }
