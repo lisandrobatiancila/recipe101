@@ -5,9 +5,9 @@
     left: 0;
     right: 0;
     top: 1;
-    bottom: 0%;
+    bottom: 0;
     background-color: var(--darkColor);
-    margin-bottom: -250px;
+    margin-bottom: -320px;
     z-index: 2;
 }
 .footer_content {
