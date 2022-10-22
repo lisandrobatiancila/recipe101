@@ -1,8 +1,7 @@
 import Navigation from "./components/navigation/Navigation";
 import Footer from "./components/footer/Footer";
-import RecipeStorage from './storage/recipeDB';
-import { Outlet } from "react-router-dom";
 import { useRecipe } from './hooks/useRecipe';
+import { Outlet } from "react-router-dom";
 
 function Home() {
     const { setIsLoading, keywords, setKeywords } = useRecipe();

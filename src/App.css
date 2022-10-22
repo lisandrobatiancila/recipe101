@@ -59,7 +59,7 @@ input {
   margin-right: 5px;
 }
 .float_end {
-  float: left;
+  float: right;
 }
 .nav button {
   border: 0px;
@@ -88,6 +88,9 @@ button {
   .nav {
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    justify-items: start;
+    justify-self: start;
   }
   .nav > .nav_item{
     display: flex;
@@ -103,10 +106,13 @@ button {
   .nav button {
     width: auto;
   }
-  nav ul {
+  .nav ul {
     display: block;
   }
-  nav ul input {
-    width: auto;
+  .nav .float_end {
+    display: flex;
+    align-self: flex-start;
+    margin-bottom: 3px;
+    margin-left: 3px;
   }
 }

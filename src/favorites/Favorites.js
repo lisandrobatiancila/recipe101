@@ -41,7 +41,9 @@ function Favorites () {
                 favorites && favorites.length > 0?
                 <FavoritesCard favorites = { favorites } removeRecipe = { removeRecipe } />
                 :
-                "you have no favorites added!."
+                <div style={{paddingBottom: "175px"}}>
+                    <span style={{borderBottom: "2px solid #1ca854"}}>you have no favorites added!.</span>
+                </div>
             }
             {
                     /[^\s]/.test(message.message)?

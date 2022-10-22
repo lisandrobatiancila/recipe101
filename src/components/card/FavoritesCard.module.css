@@ -3,6 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding-bottom: 20px;
 }
 .favorites_content {
     width: 48.33%;
@@ -67,5 +68,8 @@
     .favorites_content {
         width: 100%;
         margin: 5px;
+    }
+    .favorites_content .actions > * {
+        margin: 5px 0;
     }
 }

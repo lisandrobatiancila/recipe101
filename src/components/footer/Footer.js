@@ -1,5 +1,4 @@
 import footerStyle from './Footer.module.css';
-import { Link } from 'react-router-dom';
 
 function Footer () {
     return (
@@ -31,7 +30,7 @@ function Footer () {
                     <h3>icons</h3>
                     <ul>
                         <li>
-                            <Link to="/">icon</Link>
+                            <a href="/">icon</a>
                         </li>
                         <li>
                             <a href="https://www.freepik.com">freepik</a>
@@ -45,7 +44,10 @@ function Footer () {
                     <h3>my works</h3>
                     <ul>
                         <li>
-                            <Link to="/">recipe</Link>
+                            <a href="https://recipe101.herokuapp.com/">recipe</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/lisandrobatiancila">my github</a>
                         </li>
                     </ul>
                 </section>

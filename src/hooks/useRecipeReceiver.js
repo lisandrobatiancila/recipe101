@@ -14,7 +14,6 @@ export const useRecipeReceiver = () => {
                 }
             )
             setRecipe(response?.data)
-            console.log(response)
     
             return response
         }
