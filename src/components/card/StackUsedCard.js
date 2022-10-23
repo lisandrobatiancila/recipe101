@@ -24,35 +24,40 @@ function StackUsedCard ({ stackUsed }) {
                                     <div>
                                         <img src="../../images/github.png" width="50px" height="50px" />
                                         <p>
-                                            <a href="https://github.com">{ stack.name }</a>
+                                            <a href="https://github.com"
+                                                target="__blank">{ stack.name }</a>
                                         </p>
                                     </div>:
                                     stack.name === "heroku"?
                                     <>
                                         <img src="../../images/heroku.png" width="50px" height="50px" />
                                         <p>
-                                            <a href="https://www.heroku.com">{ stack.name }</a>
+                                            <a href="https://www.heroku.com"
+                                                target="__blank">{ stack.name }</a>
                                         </p>
                                     </>:
                                     stack.name === "free apis"?
                                     <>
                                         <img src="https://rapidapi.com/static-assets/default/logo-c337a41f-ea8a-4c2f-bfc0-ab1882c41f76.svg" />
                                         <p>
-                                            <a href="https://rapidapi.com">{ stack.name }</a>
+                                            <a href="https://rapidapi.com"
+                                                target="__blank">{ stack.name }</a>
                                         </p>
                                     </>:
                                     stack.name === "free icons"?
                                     <>
                                         <img src="https://media.flaticon.com/dist/min/img/logo/flaticon_negative.svg" />
                                         <p>
-                                            <a href="https://www.flaticon.com">{ stack.name }</a>
+                                            <a href="https://www.flaticon.com"
+                                                target="__blank">{ stack.name }</a>
                                         </p>
                                     </>:
                                     stack.name === "reactJS"?
                                     <>
                                         <img src="../../images/structure.png" width="50px" height="50px" />
                                         <p>
-                                            <a href="https://reactjs.org/">{ stack.name }</a>
+                                            <a href="https://reactjs.org/"
+                                                target="__blank">{ stack.name }</a>
                                         </p>
                                     </>:""
                                 }
